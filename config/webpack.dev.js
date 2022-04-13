@@ -28,7 +28,12 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
       chunks: ['index']
-    })
+    }),
+    env.mode === 'production' ||
+      new MiniCssExtractPlugin({
+        filename: 'css/[name].[contenthash].css',
+        chunkFilename: '[id].[contenthash].css'
+      })
   ],
   module: {
     rules: [
