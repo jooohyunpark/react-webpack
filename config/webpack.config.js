@@ -34,8 +34,8 @@ module.exports = env => {
       extensions: ['.js', '.jsx']
     },
     plugins: [
-      new MiniCssExtractPlugin(),
       new CleanWebpackPlugin(),
+      new MiniCssExtractPlugin(),
       new HtmlWebpackPlugin({
         template: './src/index.html',
         filename: 'index.html',
