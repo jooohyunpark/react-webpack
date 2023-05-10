@@ -1,7 +1,11 @@
 import React from 'react'
+import { StyledButton } from './styles'
 
 const Button = () => {
-  return <button>button</button>
+  const onClick = () => {
+    console.log('clicked')
+  }
+  return <StyledButton onClick={onClick}>button</StyledButton>
 }
 
 export default Button
